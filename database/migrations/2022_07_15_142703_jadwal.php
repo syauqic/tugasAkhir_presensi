@@ -21,6 +21,7 @@ return new class extends Migration
             $table->foreignId('id_mahasiswa');
             $table->foreignId('id_prodi');
             $table->foreignId('id_kelas');
+            $table->foreignId('id_ruang');
             $table->timestamps();
         });
     }

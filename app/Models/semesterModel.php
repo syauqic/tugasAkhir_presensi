@@ -5,21 +5,21 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class matakuliahModel extends Model
+class semesterModel extends Model
 {
     use HasFactory;
 
     public function mahasiswa()
     {
-        return $this->belongsToMany(mahasiswaModel::class);
-    }
-    public function prodi()
-    {
-        return $this->belongsTo(prodiModel::class);
+        return $this->hasMany(mahasiswaModel::class);
     }
     public function jadwal()
     {
         return $this->hasMany(jadwalModel::class);
+    }
+    public function prodi()
+    {
+        return $this->hasMany(prodiModel::class);
     }
     public function absensi()
     {

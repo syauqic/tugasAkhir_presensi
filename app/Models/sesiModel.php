@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class sesiModel extends Model
 {
     use HasFactory;
+
+    public function jadwal()
+    {
+        return $this->hasMany(jadwalModel::class);
+    }
 }

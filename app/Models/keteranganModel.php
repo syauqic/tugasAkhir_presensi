@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class keteranganModel extends Model
 {
     use HasFactory;
+
+    public function absens()
+    {
+        return $this->hasOne(absensiModel::class);
+    }
 }

@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class orangtuaModel extends Model
 {
     use HasFactory;
+
+    public function mahasiswa()
+    {
+        return $this->belongsTo(mahasiswaModel::class);
+    }
 }
